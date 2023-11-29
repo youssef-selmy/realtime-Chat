@@ -42,6 +42,8 @@
 #### Endpoint for user signup.
 ``` POST /api/auth/login ``` 
 #### Endpoint for user login. 
+``` POST /file/upload ```
+#### Endpoint for upload files  for logged user.
 ### Protect middleware to protect routes (checks user authentication).
 ## Usage
 ### File Upload
