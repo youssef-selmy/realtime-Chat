@@ -3,7 +3,7 @@ const express = require("express");
 const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 const authRoute=require('./routes/authRoute')
-
+const uploadRoute=require('./routes/uploadFileRoute')
 const socketio = require("socket.io");
 const rateLimit = require('express-rate-limit');
 const DB=require('./config/DB');
@@ -17,6 +17,8 @@ const formatMessage = require("./utils/messages");
 app.use(express.json({ limit: '20kb' }));
 app.use('/api/auth', authRoute);
 
+app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/file',uploadRoute);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/signup.html'));
   });

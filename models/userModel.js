@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema(
       required: [true, 'password required'],
       minlength: [6, 'Too short password'],
     },
+    fileLink:String,
 
   },
   { timestamps: true }
