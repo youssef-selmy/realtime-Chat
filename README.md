@@ -24,7 +24,7 @@
 
 ## bash
 ### Copy code
-``` npm start ```
+``` npm run dev ```
 ## Features
 ### File Upload (Upload Route)
 ### Functionality
